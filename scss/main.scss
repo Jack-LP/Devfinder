@@ -26,6 +26,9 @@ body {
 .container {
   width: min(90%, 110rem);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 header {
@@ -44,5 +47,81 @@ header {
     font-weight: $heavyWeight;
     font-size: 1.6rem;
     letter-spacing: 0.2rem;
+  }
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: $medBlue;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  :last-child {
+    margin-left: auto;
+  }
+}
+
+.username-input {
+  width: 100%;
+  font-size: 1.4rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: $white;
+  &::placeholder {
+    opacity: 0.7;
+  }
+}
+
+.search-btn {
+  font-size: 1.4rem;
+  color: $white;
+  background-color: $lightBlue;
+  padding: 1rem 1.2rem;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  font-weight: $heavyWeight;
+  cursor: pointer;
+}
+
+.card {
+  // display: grid;
+  // grid-template-rows: repeat(4, 1fr);
+  background-color: $medBlue;
+  padding: 2.5rem 2rem;
+  border-radius: 2rem;
+}
+
+.user-display {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user-avatar {
+  height: auto;
+  width: 8rem;
+  border-radius: 50%;
+}
+
+.display-name {
+  display: flex;
+  flex-direction: column;
+  .user-name {
+    font-weight: $heavyWeight;
+  }
+  .user-handle {
+    font-size: 1.4rem;
+    color: $lightBlue;
+    text-decoration: none;
+    :visited {
+      color: inherit;
+    }
+  }
+  .user-date {
+    font-size: 1.5rem;
+    color: $lightGrey;
   }
 }

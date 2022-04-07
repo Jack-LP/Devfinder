@@ -25,6 +25,9 @@ body {
 .container {
   width: min(90%, 110rem);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 header {
@@ -44,4 +47,84 @@ header button {
   font-weight: 600;
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1f2a48;
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+.search-section :last-child {
+  margin-left: auto;
+}
+
+.username-input {
+  width: 100%;
+  font-size: 1.4rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+.username-input::-moz-placeholder {
+  opacity: 0.7;
+}
+.username-input:-ms-input-placeholder {
+  opacity: 0.7;
+}
+.username-input::placeholder {
+  opacity: 0.7;
+}
+
+.search-btn {
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #0079fe;
+  padding: 1rem 1.2rem;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card {
+  background-color: #1f2a48;
+  padding: 2.5rem 2rem;
+  border-radius: 2rem;
+}
+
+.user-display {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user-avatar {
+  height: auto;
+  width: 8rem;
+  border-radius: 50%;
+}
+
+.display-name {
+  display: flex;
+  flex-direction: column;
+}
+.display-name .user-name {
+  font-weight: 600;
+}
+.display-name .user-handle {
+  font-size: 1.4rem;
+  color: #0079fe;
+  text-decoration: none;
+}
+.display-name .user-handle :visited {
+  color: inherit;
+}
+.display-name .user-date {
+  font-size: 1.5rem;
+  color: #bcc1d6;
 }/*# sourceMappingURL=main.css.map */
