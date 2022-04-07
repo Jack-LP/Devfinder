@@ -1,0 +1,48 @@
+@import 'variables';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $bodyFont;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: $darkBlue;
+  font-size: 1.6rem;
+  color: $white;
+}
+
+.container {
+  width: min(90%, 110rem);
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: $white;
+    font-weight: $heavyWeight;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+  }
+}
