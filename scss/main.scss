@@ -17,53 +17,57 @@ img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
+}
+
 body {
-  background-color: $darkBlue;
+  --bg: #{$darkBg};
+  --card: #{$darkCard};
+  --button: #{$darkButton};
+  --text: #{$darkText};
+  --textAlt: #{$darkTextAlt};
+  background: url(../img/gradientBg.png) no-repeat center var(--bg);
+  background-size: cover;
   font-size: 1.6rem;
-  color: $white;
+  color: var(--text);
+  min-height: 100vh;
 }
 
 .container {
-  width: min(90%, 110rem);
+  width: min(90%, 100rem);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-}
-
-.invalid {
-  box-shadow: 0 0 0 0.2rem rgba(122, 11, 33, 0.548);
+  padding-top: 4rem;
 }
 
 .not-availible {
   opacity: 0.5;
 }
 
+.shadow {
+  -webkit-box-shadow: -5px 5px 12px -5px #000000;
+  box-shadow: -5px 5px 12px -5px #0000002d;
+}
+
+.invalid {
+  box-shadow: 0 0 0 0.2rem rgba(122, 11, 33, 0.548);
+}
+
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-bottom: 2rem;
-  button {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: $white;
-    font-weight: $heavyWeight;
-    font-size: 1.6rem;
-    letter-spacing: 0.2rem;
-  }
 }
 
 .search-section {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  background-color: $medBlue;
+  gap: 1.5rem;
+  background-color: var(--card);
   padding: 1rem;
   border-radius: 1.5rem;
   :last-child {
@@ -77,7 +81,7 @@ header {
   background-color: transparent;
   outline: none;
   border: none;
-  color: $white;
+  color: var(--text);
   &::placeholder {
     opacity: 0.7;
   }
@@ -85,8 +89,8 @@ header {
 
 .search-btn {
   font-size: 1.4rem;
-  color: $white;
-  background-color: $lightBlue;
+  color: var(--text);
+  background-color: var(--button);
   padding: 1rem 1.2rem;
   outline: none;
   border: none;
@@ -96,12 +100,18 @@ header {
 }
 
 .card {
-  display: flex;
+  opacity: 0;
+  transition: opacity 0.5s linear;
   flex-direction: column;
   gap: 2rem;
-  background-color: $medBlue;
+  background-color: var(--card);
   padding: 3.5rem 2rem;
   border-radius: 2rem;
+}
+
+.show {
+  display: flex;
+  opacity: 1;
 }
 
 .user-display {
@@ -124,7 +134,7 @@ header {
   }
   .user-handle {
     font-size: 1.4rem;
-    color: $lightBlue;
+    color: var(--button);
     text-decoration: none;
     :visited {
       color: inherit;
@@ -132,12 +142,12 @@ header {
   }
   .user-date {
     font-size: 1.5rem;
-    color: $lightGrey;
+    color: var(--textAlt);
   }
 }
 
 .user-stats {
-  background-color: $darkBlue;
+  background-color: var(--bg);
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -150,7 +160,7 @@ header {
   }
   .stat-title {
     font-size: 1.3rem;
-    color: $lightGrey;
+    color: var(--textAlt);
   }
   .stat-figure {
     font-weight: $heavyWeight;
@@ -167,5 +177,55 @@ header {
   }
   img {
     filter: brightness(100);
+  }
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    font-size: 1.8rem;
+  }
+  .container {
+    padding-top: 6rem;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  .search-section {
+    padding: 1.5rem;
+  }
+  .username-input {
+    font-size: 1.6rem;
+  }
+  .search-btn {
+    padding: 1rem 2rem;
+  }
+  .card {
+    gap: 3rem;
+    padding: 3.5rem;
+  }
+  .user-avatar {
+    width: 12rem;
+  }
+  .display-name {
+    .user-handle,
+    .user-date {
+      font-size: 1.6rem;
+    }
+  }
+  .user-stats {
+    padding: 2rem 0;
+    .stat-title {
+      font-size: 1.6rem;
+    }
+    .stat-figure {
+      font-size: 2.5rem;
+    }
+  }
+  .user-links {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 2rem;
   }
 }

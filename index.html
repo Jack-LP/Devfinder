@@ -7,86 +7,86 @@
     <link rel="stylesheet" href="./scss/main.css" />
     <link rel="shortcut icon" href="./signature.svg" type="image/x-icon" />
     <script src="./app.js" defer></script>
-    <title>Github User Search</title>
+    <title>Devfinder</title>
   </head>
   <body>
     <main>
       <div class="container">
         <header>
-          <h1 class="logo">devfinder</h1>
-          <button id="theme-toggle-btn">
-            LIGHT <img src="./img/icon-sun.svg" alt="" />
-          </button>
+          <h1 class="logo">Devfinder</h1>
         </header>
-        <section id="search-section" class="search-section">
+        <section id="search-section" class="search-section shadow">
           <img src="./img/icon-search.svg" alt="Search" />
           <input
             id="username-input"
             class="username-input"
             type="text"
-            placeholder="Search GitHub username"
+            placeholder="GitHub username"
           />
           <button id="search-btn" class="search-btn">Search</button>
         </section>
-        <section class="card">
+        <section id="card" class="card shadow">
           <div class="user-display">
-            <img
-              id="user-avatar"
-              class="user-avatar"
-              src="./img/jp paint.jpg"
-              alt="Avatar"
-            />
+            <img id="user-avatar" class="user-avatar" src="" alt="Avatar" />
             <div class="display-name">
-              <p id="user-name" class="user-name">The Octocat</p>
-              <a id="user-handle" class="user-handle" href="#">@octocat</a>
-              <p id="user-date" class="user-date">Joined 25 Jan 2011</p>
+              <p id="user-name" class="user-name"></p>
+              <a id="user-handle" class="user-handle" href="#"></a>
+              <p id="user-date" class="user-date"></p>
             </div>
           </div>
           <div class="user-bio">
-            <p id="user-bio">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-              cum, dicta voluptas impedit autem nisi itaque nostrum dolores
-              aliquam nemo!
-            </p>
+            <p id="user-bio"></p>
           </div>
           <div class="user-stats">
             <div class="repo-stat">
               <p class="stat-title">Repos</p>
-              <p id="user-repos" class="stat-figure">8</p>
+              <p id="user-repos" class="stat-figure"></p>
             </div>
             <div class="follow-stat">
               <p class="stat-title">Followers</p>
-              <p id="user-followers" class="stat-figure">3938</p>
+              <p id="user-followers" class="stat-figure"></p>
             </div>
             <div class="following-stat">
               <p class="stat-title">Following</p>
-              <p id="user-following" class="stat-figure">9</p>
+              <p id="user-following" class="stat-figure"></p>
             </div>
           </div>
           <div class="user-links">
             <div class="location">
-              <img src="./img/icon-location.svg" alt="Location" />
-              <a id="user-location" class="user-link" data-id="location"
-                >London</a
-              >
+              <img
+                src="./img/icon-location.svg"
+                alt="Location"
+                class="link-img"
+              />
+              <a id="user-location" class="user-link" data-id="location"></a>
             </div>
             <div class="website">
-              <img src="./img/icon-website.svg" alt="Website" />
-              <a id="user-website" class="user-link" data-id="blog"
-                >https://github.blog</a
-              >
+              <img
+                src="./img/icon-website.svg"
+                alt="Website"
+                class="link-img"
+              />
+              <a id="user-website" class="user-link" data-id="blog"></a>
             </div>
             <div class="twitter">
-              <img src="./img/icon-twitter.svg" alt="Twitter" />
-              <a id="user-twitter" class="user-link" data-id="twitter_username"
-                >Not availible</a
-              >
+              <img
+                src="./img/icon-twitter.svg"
+                alt="Twitter"
+                class="link-img"
+              />
+              <a
+                id="user-twitter"
+                class="user-link"
+                data-id="twitter_username"
+              ></a>
             </div>
             <div class="company">
-              <img src="./img/icon-company.svg" alt="Company" />
-              <a id="user-company" class="user-link" data-id="company"
-                >@github</a
-              >
+              <img
+                src="./img/icon-company.svg"
+                alt="Company"
+                class="link-img"
+              />
+              <a id="user-company" class="user-link" data-id="company"></a>
             </div>
           </div>
         </section>

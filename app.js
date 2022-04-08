@@ -4,6 +4,7 @@ const userInput = document.getElementById('username-input');
 const searchBtn = document.getElementById('search-btn');
 
 // user display
+const userCard = document.getElementById('card');
 const userAvatar = document.getElementById('user-avatar');
 const userName = document.getElementById('user-name');
 const userHandle = document.getElementById('user-handle');
@@ -17,7 +18,6 @@ const userFollowing = document.getElementById('user-following');
 
 // user links
 const userLinks = document.querySelectorAll('.user-link');
-
 const userLocation = document.getElementById('user-location');
 const userWebsite = document.getElementById('user-website');
 const userTwitter = document.getElementById('user-twitter');
@@ -48,6 +48,7 @@ async function getUserData(username) {
 }
 
 function fillCard(userData) {
+  userCard.classList.add('show');
   searchSection.classList.remove('invalid');
   let joinDate = userData.created_at.substr(0, 9);
   userAvatar.src = userData.avatar_url;
@@ -59,6 +60,7 @@ function fillCard(userData) {
   }
 
   userHandle.textContent = `@${userData.login}`;
+  userHandle.href = userData.html_url;
   userDate.textContent = `Joined ${joinDate}`;
 
   userBio.textContent = userData.bio;
@@ -77,11 +79,6 @@ function fillCard(userData) {
       link.classList.add('not-availible');
     }
   });
-
-  // userLocation.textContent = userData.location;
-  // userWebsite.textContent = userData.blog;
-  // userTwitter.textContent = userData.twitter_username;
-  // userCompany.textContent = userData.company;
 }
 
 function invalidInput() {
