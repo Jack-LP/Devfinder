@@ -18,7 +18,7 @@
             LIGHT <img src="./img/icon-sun.svg" alt="" />
           </button>
         </header>
-        <section class="search-section">
+        <section id="search-section" class="search-section">
           <img src="./img/icon-search.svg" alt="Search" />
           <input
             id="username-input"
@@ -42,9 +42,53 @@
               <p id="user-date" class="user-date">Joined 25 Jan 2011</p>
             </div>
           </div>
-          <div class="user-bio"></div>
-          <div class="user-stats"></div>
-          <div class="user-links"></div>
+          <div class="user-bio">
+            <p id="user-bio">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
+              cum, dicta voluptas impedit autem nisi itaque nostrum dolores
+              aliquam nemo!
+            </p>
+          </div>
+          <div class="user-stats">
+            <div class="repo-stat">
+              <p class="stat-title">Repos</p>
+              <p id="user-repos" class="stat-figure">8</p>
+            </div>
+            <div class="follow-stat">
+              <p class="stat-title">Followers</p>
+              <p id="user-followers" class="stat-figure">3938</p>
+            </div>
+            <div class="following-stat">
+              <p class="stat-title">Following</p>
+              <p id="user-following" class="stat-figure">9</p>
+            </div>
+          </div>
+          <div class="user-links">
+            <div class="location">
+              <img src="./img/icon-location.svg" alt="Location" />
+              <a id="user-location" class="user-link" data-id="location"
+                >London</a
+              >
+            </div>
+            <div class="website">
+              <img src="./img/icon-website.svg" alt="Website" />
+              <a id="user-website" class="user-link" data-id="blog"
+                >https://github.blog</a
+              >
+            </div>
+            <div class="twitter">
+              <img src="./img/icon-twitter.svg" alt="Twitter" />
+              <a id="user-twitter" class="user-link" data-id="twitter_username"
+                >Not availible</a
+              >
+            </div>
+            <div class="company">
+              <img src="./img/icon-company.svg" alt="Company" />
+              <a id="user-company" class="user-link" data-id="company"
+                >@github</a
+              >
+            </div>
+          </div>
         </section>
       </div>
     </main>
